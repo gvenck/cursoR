@@ -1,0 +1,14 @@
+Package: cursoR
+Type: Package
+Title: Didatic material for R course.
+Version: 0.1.0
+Author: Cristiane Taniguti
+Maintainer: Cristiane Taniguti <chtaniguti@usp.br>
+Description: Package for didatic purpose.
+Depends: R (>= 3.4.0)
+Imports: 
+VignetteBuilder: knitr
+Encoding: UTF-8
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
