@@ -120,7 +120,7 @@ sessao2 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE,
   
   ##Ex 3
   list_mam <- list(Nomes= c("Dinho", "Bento", "Samuel", "Sérgio", "Rasec"),
-                   Função=c("Vocalista","Guitarrista", "Baixista", "Baterista","Tecladista"),
+                   Funcao=c("Vocalista","Guitarrista", "Baixista", "Baterista","Tecladista"),
                    Idade = c(24, 25, 22, 26, 28))
   l_idade <- mean(list_mam$Idade)
   l_ordered <- lapply(list_mam, function(x){ x[order(list_mam$Nomes)]})
