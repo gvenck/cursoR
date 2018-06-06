@@ -1,7 +1,7 @@
 ##' Para conferir as respostas dos exercícios continuos no "Exercicios.Rmd"
-##' @export
 
-#Operadores e operações básicas
+##' Operadores e operações básicas
+##' @export
 sessao1 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE, a2 = FALSE, b2 = FALSE, c2 = FALSE, d2 = FALSE, a3 = FALSE){
 
   ## Ex 1
@@ -76,7 +76,8 @@ sessao1 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE, a2 = FALSE, b2 = 
   post_answers(post_content= resp)
 }
 
-
+##' Classe de objetos
+##' @export
 sessao2 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE, 
                     a2 = FALSE, b2 = FALSE, 
                     a3 = FALSE, b3 = FALSE, c3 = FALSE){
@@ -147,6 +148,8 @@ sessao2 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE,
 
 }
 
+##' Indexação
+##' @export
 sessao3 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE){
   
   ## Ex 1
@@ -179,6 +182,44 @@ sessao3 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE){
   post_answers(post_content= resp)
   
 }
+
+##' Estruturas condicionais e de repetição
+##'@export
+sessao4 <- function(nome= FALSE, a1=FALSE, a2=FALSE){
+  ## Ex 1
+  a = seq(1,5,1)
+  while(sum(a) < 10000){
+    a = a + 8
+  }
+  if(all(a1 == a)){
+    a1 = TRUE
+    cat("1 ok\n")
+  } else {
+    a1 = FALSE}
+  
+  ## Ex 2
+  set.seed(123456)
+  produtividade = rnorm(50, mean = 3500.00, sd = 800)
+  resultado = c()
+  for(i in 1:length(produtividade)){
+    if (produtividade[i] > 3500.00){
+      resultado[i] <- ("acima da média")
+    } else {resultado[i] <- ("abaixo da média")}
+  }
+  
+  if(all(a2 == resultado)){
+    a2 = TRUE
+    cat("2 ok\n")
+  } else {
+    a2 = FALSE}
+  
+  resp <- c(nome, a1,a2)
+  
+  form_id <- "1khpC_c-F9ZpHsxs1r1G-njDT-Hx05xjQMgigCOpaV6g"
+  post_answers <- googleformr::gformr(form_id)
+  post_answers(post_content= resp)
+}
+
 
 
 
