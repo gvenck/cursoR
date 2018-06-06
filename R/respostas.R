@@ -103,7 +103,7 @@ sessao2 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE,
   
   ## Ex 2
   hp_mean <- mean(mtcars$hp)
-  hp_fac_mean <- mean(as.factor(mtcars$hp)) #Resulta em NA
+  #hp_fac_mean <- mean(as.factor(mtcars$hp)) #Resulta em NA
   
   if(a2 == hp_mean){
     a2 = TRUE
@@ -123,7 +123,7 @@ sessao2 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE,
   l_idade <- mean(list_mam$Idade)
   l_ordered <- lapply(list_mam, function(x){ x[order(list_mam$Nomes)]})
 
-  if(all.equal(a3, list_mam)){
+  if(identical(a3, list_mam)){
     a3 = TRUE
     cat("a3 ok\n")
   } else { a3 = FALSE}
@@ -133,10 +133,17 @@ sessao2 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE,
     cat("b3 ok\n")
   } else { b3 = FALSE}
   
-  if(all.equal(c3, l_ordered)){
+  if(identical(c3, l_ordered)){
     c3 = TRUE
     cat("c3 ok\n")
   } else { c3 = FALSE}
+  
+  resp <- c(nome, a1,b1,c1, a2,b2,a3, b3, c3)
+  
+  form_id <- "1LyBlGVe8-IK6hpEp40DHIdn10HBcMRGpKhi55nMx1zg"
+  post_answers <- googleformr::gformr(form_id)
+  post_answers(post_content= resp)
+
 }
 
 sessao3 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE){
@@ -163,6 +170,13 @@ sessao3 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE){
     c1 = TRUE
     cat("1c ok\n")
   } else { c1 = FALSE}
+  
+  resp <- c(nome, a1,b1,c1)
+  
+  form_id <- "1gtTOnXdz1CseC3jBXuLLsA9GNG7fPmX2pWzl-lNg69Y"
+  post_answers <- googleformr::gformr(form_id)
+  post_answers(post_content= resp)
+  
 }
 
 ##'@export
