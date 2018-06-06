@@ -77,7 +77,3 @@ sessao1 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE, a2 = FALSE, b2 = 
   post_answers(post_content= resp)
 }
 
-##'@export
-
-
-sessao1(b1 = med_vec)
