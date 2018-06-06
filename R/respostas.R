@@ -183,6 +183,8 @@ sessao3 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE){
   
 }
 
+##' Estruturas condicionais e de repetição
+##'@export
 sessao4 <- function(nome= FALSE, a1=FALSE, a2=FALSE){
   ## Ex 1
   a = seq(1,5,1)
@@ -217,7 +219,7 @@ sessao4 <- function(nome= FALSE, a1=FALSE, a2=FALSE){
   post_answers <- googleformr::gformr(form_id)
   post_answers(post_content= resp)
 }
-##'@export
+
 
 
 
