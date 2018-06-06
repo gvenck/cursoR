@@ -1,7 +1,7 @@
 ##' Para conferir as respostas dos exercícios continuos no "Exercicios.Rmd"
-##' @export
 
-#Operadores e operações básicas
+##' Operadores e operações básicas
+##' @export
 sessao1 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE, a2 = FALSE, b2 = FALSE, c2 = FALSE, d2 = FALSE, a3 = FALSE){
 
   ## Ex 1
@@ -76,7 +76,8 @@ sessao1 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE, a2 = FALSE, b2 = 
   post_answers(post_content= resp)
 }
 
-
+##' Classe de objetos
+##' @export
 sessao2 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE, 
                     a2 = FALSE, b2 = FALSE, 
                     a3 = FALSE, b3 = FALSE, c3 = FALSE){
@@ -147,6 +148,8 @@ sessao2 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE,
 
 }
 
+##' Indexação
+##' @export
 sessao3 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE){
   
   ## Ex 1
