@@ -61,10 +61,10 @@ sessao1 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE, a2 = FALSE, b2 = 
   x1 <- (-8 - sqrt(8^2 - 4*2*6))/2*4
   x2 <- (-8 + sqrt(8^2 - 4*2*6))/2*4
 
-  x <- c(x1,x2)
+  x <- c(round(x1),round(x2))
+  xrev <- c(round(x2),round(x1))
 
-
-  if(all(a3 == x)){
+  if(all(a3 == x) || all(a3 == xrev)){
     a3 = TRUE
     cat("a3 ok\n")
   } else { a3 = FALSE}
@@ -120,7 +120,7 @@ sessao2 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE,
   
   ##Ex 3
   list_mam <- list(Nomes= c("Dinho", "Bento", "Samuel", "Sérgio", "Rasec"),
-                   Função=c("Vocalista","Guitarrista", "Baixista", "Baterista","Tecladista"),
+                   Funcao=c("Vocalista","Guitarrista", "Baixista", "Baterista","Tecladista"),
                    Idade = c(24, 25, 22, 26, 28))
   l_idade <- mean(list_mam$Idade)
   l_ordered <- lapply(list_mam, function(x){ x[order(list_mam$Nomes)]})
