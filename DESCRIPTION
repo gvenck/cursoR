@@ -1,7 +1,7 @@
 Package: cursoR
 Type: Package
 Title: Didatic material for R course.
-Version: 0.1.0
+Version: 0.1.1
 Author: Cristiane Taniguti
 Maintainer: Cristiane Taniguti <chtaniguti@usp.br>
 Description: Package for didatic purpose.

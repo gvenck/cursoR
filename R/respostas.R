@@ -125,7 +125,7 @@ sessao2 <- function(nome= FALSE, a1=FALSE, b1=FALSE, c1=FALSE,
   l_idade <- mean(list_mam$Idade)
   l_ordered <- lapply(list_mam, function(x){ x[order(list_mam$Nomes)]})
 
-  if(identical(a3, list_mam)){
+  if(identical(a3, length(list_mam))){
     a3 = TRUE
     cat("a3 ok\n")
   } else { a3 = FALSE}
